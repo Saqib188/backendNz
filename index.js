@@ -12,7 +12,13 @@ const app = express();
 config();
 connectDB();
 app.use(json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://notezippe.onrender.com'],
+    credentials: true,
+  })
+);
 
 
 
