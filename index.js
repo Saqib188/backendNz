@@ -15,7 +15,7 @@ app.use(json());
 
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://notezippe.onrender.com'],
+    origin: ["*"],
     credentials: true,
   })
 );
