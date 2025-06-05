@@ -16,7 +16,7 @@ app.use(json());
 app.use(
   cors({
     origin: ["*"],
-    credentials: true,
+    credentials: false,
   })
 );
 
