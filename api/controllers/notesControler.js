@@ -12,6 +12,7 @@ const getNotes = asyncHandler(
 )
  const createNotes = asyncHandler(async (req,res) => {
     const {title,content,category}= req.body;
+     console.log(title,content,category,"from create note ")
     if (!title || !content || !category){
         res.status(400);
         throw new Error("Please fill All fields")
