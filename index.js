@@ -15,8 +15,8 @@ app.use(json());
 
 app.use(
   cors({
-    origin: ["*"],
-    credentials: false,
+    origin: ["https://notezipperf.onrender.com"],
+    credentials: true,
   })
 );
 
@@ -35,7 +35,7 @@ app.use("/api/users", userRouter);
 app.use("/api/notes", notesRouter);
 app.use('/uploads', express.static('uploads'));
 app.use(errorHandler);
-app.listen(3035, () => console.log("server is running at 3035 and watching"));
+app.listen(port, () => console.log("server is running at 3035 and watching"));
 
 
 
