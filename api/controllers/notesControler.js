@@ -17,7 +17,7 @@ const getNotes = asyncHandler(
         res.status(400);
         throw new Error("Please fill All fields")
     } else {
-        const note = new Note({user:req.user._id,title,content,category,createdOn});
+        const note = new Note({user:req.user._id,title,content,category,createdOn: Date.now()});
         const createdNote = await note.save();
        return res.status(201).json(createdNote)
     }
